@@ -1,0 +1,130 @@
+2021-03-11 06:52:23,882 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
+2021-03-11 06:52:38,181 ERROR: Exception on /edit_profile [POST] [in e:\data science\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\data science\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "e:\data science\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\Data Science\microblog\app\routes.py", line 91, in edit_profile
+    db.session.commit()
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 163, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1046, in commit
+    self.transaction.commit()
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 504, in commit
+    self._prepare_impl()
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 483, in _prepare_impl
+    self.session.flush()
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2540, in flush
+    self._flush(objects)
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2682, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2642, in _flush
+    flush_context.execute()
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 230, in save_obj
+    _emit_update_statements(
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 994, in _emit_update_statements
+    c = cached_connections[connection].execute(
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "e:\data science\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
+[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
+[parameters: ('susan', 'Hello I am susan...', 1)]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+2021-03-11 07:37:24,570 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
+2021-03-14 06:20:11,710 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
+2021-03-14 06:23:02,203 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
+2021-03-16 06:34:26,855 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
+2021-03-16 06:44:17,454 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
+2021-03-16 06:47:10,362 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
+2021-03-16 06:51:44,537 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
+2021-03-16 06:53:07,233 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
+2021-03-26 05:50:11,331 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
+2021-03-26 05:50:22,747 ERROR: Exception on /favicon.ico [GET] [in e:\data science\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1926, in dispatch_request
+    self.raise_routing_exception(req)
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1908, in raise_routing_exception
+    raise request.routing_exception
+  File "e:\data science\microblog\venv\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "e:\data science\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1816, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1744, in handle_http_exception
+    return handler(e)
+  File "E:\Data Science\microblog\app\errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+  File "e:\data science\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "e:\data science\microblog\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "e:\data science\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "E:\Data Science\microblog\app\templates\404.html", line 5, in template
+    <p><a href="{{ url_for('index')}}">Back</a></p>
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '{'
+2021-03-26 05:52:25,177 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
