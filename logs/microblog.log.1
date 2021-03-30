@@ -1,98 +1,4 @@
-2021-03-26 05:52:32,532 ERROR: Exception on /favicon.ico [GET] [in e:\data science\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1926, in dispatch_request
-    self.raise_routing_exception(req)
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1908, in raise_routing_exception
-    raise request.routing_exception
-  File "e:\data science\microblog\venv\lib\site-packages\flask\ctx.py", line 350, in match_request
-    result = self.url_adapter.match(return_rule=True)
-  File "e:\data science\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1945, in match
-    raise NotFound()
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1816, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1744, in handle_http_exception
-    return handler(e)
-  File "E:\Data Science\microblog\app\errors.py", line 6, in not_found_error
-    return render_template('404.html'), 404
-  File "e:\data science\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "E:\Data Science\microblog\app\templates\404.html", line 5, in template
-    <p><a href="{{ url_for('index') }}">Back</a></p>
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '{'
-2021-03-26 05:54:00,534 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
-2021-03-26 05:54:07,851 ERROR: Exception on /favicon.ico [GET] [in e:\data science\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1926, in dispatch_request
-    self.raise_routing_exception(req)
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1908, in raise_routing_exception
-    raise request.routing_exception
-  File "e:\data science\microblog\venv\lib\site-packages\flask\ctx.py", line 350, in match_request
-    result = self.url_adapter.match(return_rule=True)
-  File "e:\data science\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1945, in match
-    raise NotFound()
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1816, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1744, in handle_http_exception
-    return handler(e)
-  File "E:\Data Science\microblog\app\errors.py", line 6, in not_found_error
-    return render_template('404.html'), 404
-  File "e:\data science\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "e:\data science\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "E:\Data Science\microblog\app\templates\404.html", line 5, in template
-    <p><a href="{{ url_for('index') }}">Back</a></p>
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '{'
-2021-03-26 05:59:51,077 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:45]
-2021-03-26 06:00:55,823 ERROR: Exception on /index [GET] [in e:\data science\microblog\venv\lib\site-packages\flask\app.py:1891]
+2021-03-28 12:35:54,187 ERROR: Exception on /reset_password_request [POST] [in e:\data science\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -106,14 +12,11 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "e:\data science\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "E:\Data Science\microblog\app\routes.py", line 34, in index
-    posts = current_user.followed_post().all()
-  File "e:\data science\microblog\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_post'
-2021-03-26 06:01:12,739 ERROR: Exception on /index [GET] [in e:\data science\microblog\venv\lib\site-packages\flask\app.py:1891]
+  File "E:\Data Science\microblog\app\routes.py", line 171, in reset_password_request
+    user = User.query.filter_by(email=form.data.email).first()
+AttributeError: 'dict' object has no attribute 'email'
+2021-03-28 12:38:11,314 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-28 12:38:23,958 ERROR: Exception on /reset_password_request [POST] [in e:\data science\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -127,10 +30,107 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "e:\data science\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "E:\Data Science\microblog\app\routes.py", line 34, in index
-    posts = current_user.followed_post().all()
-  File "e:\data science\microblog\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_post'
+  File "E:\Data Science\microblog\app\routes.py", line 173, in reset_password_request
+    send_password_reset_email(user)
+  File "E:\Data Science\microblog\app\email.py", line 13, in send_password_reset_email
+    token = user.get_password_reset_token()
+AttributeError: 'User' object has no attribute 'get_password_reset_token'
+2021-03-28 12:47:46,417 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-28 12:48:26,274 ERROR: Exception on /reset_password_request [POST] [in e:\data science\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\data science\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Data Science\microblog\app\routes.py", line 173, in reset_password_request
+    send_password_reset_email(user)
+  File "E:\Data Science\microblog\app\email.py", line 13, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "E:\Data Science\microblog\app\models.py", line 64, in get_reset_password_token
+    return jwt.encode(
+TypeError: encode() got an unexpected keyword argument 'algorithms'
+2021-03-28 12:49:52,473 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-28 12:50:20,288 ERROR: Exception on /reset_password_request [POST] [in e:\data science\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "e:\data science\microblog\venv\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "e:\data science\microblog\venv\lib\site-packages\flask_mail.py", line 427, in send
+    connection.send(self)
+  File "e:\data science\microblog\venv\lib\site-packages\flask_mail.py", line 188, in send
+    self.host.sendmail(sanitize_address(envelope_from or message.sender),
+  File "C:\Users\Maharaj\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 856, in sendmail
+    self.ehlo_or_helo_if_needed()
+  File "C:\Users\Maharaj\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 604, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "C:\Users\Maharaj\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 444, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+  File "C:\Users\Maharaj\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 371, in putcmd
+    self.send(str)
+  File "C:\Users\Maharaj\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\data science\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\data science\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Data Science\microblog\app\routes.py", line 173, in reset_password_request
+    send_password_reset_email(user)
+  File "E:\Data Science\microblog\app\email.py", line 14, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+  File "E:\Data Science\microblog\app\email.py", line 10, in send_email
+    mail.send(msg)
+  File "e:\data science\microblog\venv\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "e:\data science\microblog\venv\lib\site-packages\flask_mail.py", line 152, in __exit__
+    self.host.quit()
+  File "C:\Users\Maharaj\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 988, in quit
+    res = self.docmd("quit")
+  File "C:\Users\Maharaj\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 424, in docmd
+    self.putcmd(cmd, args)
+  File "C:\Users\Maharaj\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 371, in putcmd
+    self.send(str)
+  File "C:\Users\Maharaj\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+2021-03-28 12:52:00,882 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-29 09:57:55,697 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-29 10:08:14,755 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 04:39:11,185 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 04:46:11,145 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 04:54:38,697 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 05:09:13,090 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 05:21:41,028 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 05:48:07,334 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:03:37,679 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:05:26,425 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:12:05,628 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:17:34,307 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:19:01,662 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:23:04,791 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:28:12,266 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:31:23,647 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:34:21,741 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:36:05,057 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:37:47,381 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:40:47,468 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
+2021-03-30 06:43:23,511 INFO: Microblog startup [in E:\Data Science\microblog\app\__init__.py:46]
